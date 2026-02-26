@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Management - BlueWave Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #0f172a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #4cc9f0;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            color: #4cc9f0;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #4cc9f0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background: #334155;
+            color: #4cc9f0;
+        }
+
+        tr:hover {
+            background: #0f172a;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .edit {
+            background: #4cc9f0;
+            color: #000;
+        }
+
+        .delete {
+            background: #e63946;
+            color: #fff;
+        }
+
+        .form-container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .form-container h3 {
+            color: #4cc9f0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background: #4cc9f0;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🏨 BlueWave Hotel</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="customers.html">Customers</a>
+            <a href="staff.html">Staff</a>
+            <a href="booking.html">Booking</a>
+            <a href="payment.html" class="active">Payment</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Payment Management</h1>
+
+        <div class="form-container">
+            <h3 id="formTitle">Add Payment</h3>
+            <form id="paymentForm">
+                <label for="bookingId">Booking ID</label>
+                <input type="number" id="bookingId" required placeholder="Enter Booking ID">
+
+                <label for="paymentDate">Payment Date</label>
+                <input type="date" id="paymentDate" required>
+
+                <label for="amount">Amount Paid</label>
+                <input type="number" id="amount" required placeholder="Enter amount">
+
+                <label for="method">Payment Method</label>
+                <select id="method" required>
+                    <option value="Cash">Cash</option>
+                    <option value="Card">Card</option>
+                    <option value="Online">Online</option>
+                </select>
+
+                <label for="paymentStatus">Payment Status</label>
+                <select id="paymentStatus" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Paid">Paid</option>
+                    <option value="Failed">Failed</option>
+                </select>
+
+                <button type="submit" id="submitBtn">Add Payment</button>
+            </form>
+        </div>
+
+        
+
+    </div>
+    <script src="js/payment.js"></script>
+</body>
+
+</html>

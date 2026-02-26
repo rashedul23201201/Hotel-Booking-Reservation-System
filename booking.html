@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Management - BlueWave Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #0f172a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #4cc9f0;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            color: #4cc9f0;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #4cc9f0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background: #334155;
+            color: #4cc9f0;
+        }
+
+        tr:hover {
+            background: #0f172a;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .edit {
+            background: #4cc9f0;
+            color: #000;
+        }
+
+        .delete {
+            background: #e63946;
+            color: #fff;
+        }
+
+        /* Form */
+        .form-container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .form-container h3 {
+            color: #4cc9f0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container select,
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background: #4cc9f0;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🏨 BlueWave Hotel</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="customers.html">Customers</a>
+            <a href="staff.html">Staff</a>
+            <a href="booking.html" class="active">Booking</a>
+            <a href="payment.html">Payment</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Booking Management</h1>
+
+        <!-- Booking Form -->
+        <div class="form-container">
+            <h3 id="formTitle">Add Booking</h3>
+            <form id="bookingForm">
+                <label for="customerSelect">Customer</label>
+                <select id="customerSelect" required></select>
+
+                <label for="roomSelect">Room</label>
+                <select id="roomSelect" required></select>
+
+                <label for="staffSelect">Staff</label>
+                <select id="staffSelect" required></select>
+
+                <label for="checkIn">Check-in Date</label>
+                <input type="date" id="checkIn" required>
+
+                <label for="checkOut">Check-out Date</label>
+                <input type="date" id="checkOut" required>
+
+                <label for="status">Booking Status</label>
+                <select id="status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+
+                <button type="submit" id="submitBtn">Add Booking</button>
+            </form>
+        </div>
+
+        
+
+    </div>
+
+    <script src="js/booking.js"></script>
+</body>
+
+</html>

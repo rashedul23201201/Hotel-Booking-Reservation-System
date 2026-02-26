@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            color: #4cc9f0;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #4cc9f0;
+        }
+
+        /* Hero Section with background image */
+        .hero {
+            background: url('images/hotel-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* overlay */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #4cc9f0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 12px 25px;
+            background: #4cc9f0;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero a:hover {
+            opacity: 0.8;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 40px;
+            background: #0f172a;
+            color: #fff;
+            text-align: center;
+        }
+
+        .services h2 {
+            color: #4cc9f0;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            background: #334155;
+        }
+
+        .service-card h3 {
+            color: #4cc9f0;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        /* Responsive text for small screens */
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🏨 BlueWave Hotel</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="customers.html">Customers</a>
+            <a href="staff.html">Staff</a>
+            <a href="booking.html">Booking</a>
+            <a href="payment.html">Payment</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to BlueWave Hotel</h1>
+            <p>Your comfort and luxury stay starts here. Explore our rooms, services, and make bookings online.</p>
+            <a href="booking.html">Book a Room</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Room Booking</h3>
+                <p>Reserve single, double, and deluxe rooms with real-time availability and pricing.</p>
+            </div>
+            <div class="service-card">
+                <h3>Customer Management</h3>
+                <p>Manage customer details, track stays, and maintain a professional database.</p>
+            </div>
+            <div class="service-card">
+                <h3>Staff Management</h3>
+                <p>Track hotel staff, roles, and contact details efficiently from a centralized system.</p>
+            </div>
+            <div class="service-card">
+                <h3>Booking & Payment</h3>
+                <p>Handle bookings, payments, and statuses easily with a clean and dynamic interface.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 BlueWave Hotel. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>

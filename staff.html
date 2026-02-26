@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Management - BlueWave Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #0f172a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            color: #4cc9f0;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            color: #4cc9f0;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #4cc9f0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background: #334155;
+            color: #4cc9f0;
+        }
+
+        tr:hover {
+            background: #0f172a;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .edit {
+            background: #4cc9f0;
+            color: #000;
+        }
+
+        .delete {
+            background: #e63946;
+            color: #fff;
+        }
+
+        .form-container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .form-container h3 {
+            color: #4cc9f0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background: #4cc9f0;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🏨 BlueWave Hotel</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="customers.html">Customers</a>
+            <a href="staff.html" class="active">Staff</a>
+            <a href="booking.html">Booking</a>
+            <a href="payment.html">Payment</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Staff Management</h1>
+
+        <div class="form-container">
+            <h3 id="formTitle">Add Staff</h3>
+            <form id="staffForm">
+                <label for="staffName">Full Name</label>
+                <input type="text" id="staffName" required placeholder="Enter full name">
+
+                <label for="role">Role</label>
+                <input type="text" id="role" required placeholder="Manager, Receptionist, etc.">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required placeholder="01XXXXXXXXX" pattern="[0-9]{11}">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="example@gmail.com">
+
+                <button type="submit" id="submitBtn">Add Staff</button>
+            </form>
+        </div>
+
+        
+
+    </div>
+    <script src="js/staff.js"></script>
+</body>
+
+</html>
